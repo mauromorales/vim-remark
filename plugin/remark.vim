@@ -2,8 +2,8 @@ let s:plugindir = expand('<sfile>:p:h:h')
 
 function! s:RemarkPreview()
   call s:RemarkBuild()
-  let s:file_name = expand('%:t:r') + ".html"
-  call system("xdg-open", s:file_name)
+  let s:file_name = expand('%:t:r') . ".html"
+  call system("xdg-open " . s:file_name)
 endfunction
 
 function! s:RemarkBuild()
